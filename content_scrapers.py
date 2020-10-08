@@ -56,7 +56,11 @@ def upchieve(content_site):
                 post_media_clean.append(pic.get_attribute('src'))
         # append back into list
         date_list.append(post_date)
+        if len(post_text_clean) > 1:
+            post_text_clean = ' '.join(post_text_clean)
         content_list.append(post_text_clean)
+        if len(post_media_clean) > 1:
+            post_text_clean = ', '.join(post_media_clean)
         media_list.append(post_media_clean)
     driver.quit()
     return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
@@ -1339,7 +1343,11 @@ def bowery_mission(content_site):
                 post_media_clean.append(pic.get_attribute('src'))
         # append back into list
         date_list.append(post_date)
+        if len(post_text_clean) > 1:
+            post_text_clean = ' '.join(post_text_clean)
         content_list.append(post_text_clean)
+        if len(post_media_clean) > 1:
+            post_text_clean = ', '.join(post_media_clean)
         media_list.append(post_media_clean)
     driver.quit()
     return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
