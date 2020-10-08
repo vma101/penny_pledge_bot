@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Penny the Pledge Bot</title>
+    </head>
+    <body>
+        <strong>Hi there! I am Vanessa's first web app, so I might have some problems.</strong>
+
+        <p> What organizations would you like to scrape today? Please use lowercase, and separate them with commas.</p>
+
+        <form action="{{ url_for("scraper")}}" method="post"> 
+        <label for="organisations">Organisations: </label> 
+        <input type="text" id="orgs" name="orgs" placeholder="orgs">
+        <button type="submit">Submit</button> 
+
+        <p> Here are a list of all the nonprofits:</p>
+        <p>{{all}}</p>
+
+    </body>
+</html>

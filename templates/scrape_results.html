@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Penny the Pledge Bot</title>
+    </head>
+    <body>
+        <strong>These are the organisations you wanted me to scrape!</strong>
+
+        {% for i in range(length)%}
+        <p>{{nonprofits[i]}}</p>
+            {{ tables[i]|safe }}
+        {% endfor %}
+        
+
+    </body>
+</html>
