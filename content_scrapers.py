@@ -41,6 +41,7 @@ def upchieve(content_site):
         title_list.append(post_list[i].text)
         post_url = post_list[i].get_attribute('href')
         url_list.append(post_url)
+    url_list = url_list[0:2]
     for i in range(len(url_list)):
         driver.get(url_list[i])
         # extract date
@@ -83,6 +84,7 @@ def redrover(content_site):
     for i in range(len(url_list_all)):
         if url_list_all[i].startswith("https://redrover.org/{}".format(date.today().strftime('%Y'))):
             url_list.append(url_list_all[i])
+    url_list = url_list[0:2]
     for i in range(len(url_list)):
         driver.get(url_list[i])
         # extract title
