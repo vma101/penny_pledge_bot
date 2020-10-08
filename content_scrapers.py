@@ -6,14 +6,16 @@ from selenium.webdriver.support.ui import WebDriverWait
 import re
 import os
 import sqlite3 as db
+import platform as platform
 
 ################################### COMPANY SCRAPERS ###################################
 
 def get_page(url):
-    try:
-        driver = webdriver.Chrome()
-    except:
-        driver = webdriver.Firefox()
+    driver = webdriver.Firefox("./drivers")
+    # try:
+    #     driver = webdriver.Chrome()
+    # except:
+    #     driver = webdriver.Firefox()
     driver.get(url)
     return driver
 
@@ -21,7 +23,7 @@ def get_page(url):
 def upchieve(content_site):
     # name = 'upchieve'
     class_text = 'BlogList-item-title'
-    #     driver = get_page(content_site)
+    driver = get_page(content_site)
     post_list = driver.find_elements_by_class_name(class_text)
     title_list = []
     url_list = []
@@ -58,7 +60,7 @@ def upchieve(content_site):
 def redrover(content_site):
     # name = 'redrover'
     tag_text = 'article'
-    #     driver = get_page(content_site)
+    driver = get_page(content_site)
     post_list = driver.find_elements_by_tag_name(tag_text)
     title_list = []
     url_list_all = []
