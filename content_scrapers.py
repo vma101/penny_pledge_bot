@@ -19,8 +19,8 @@ driver=webdriver.Chrome(executable_path = os.environ.get("CHROMEDRIVER_PATH"), c
 ################################### COMPANY SCRAPERS ###################################
 
 def get_page(url):
-    driver = webdriver.Firefox()
-    # driver = webdriver.Chrome()
+    # driver = webdriver.Firefox()
+    driver = webdriver.Chrome()
     # try:
     #     driver = webdriver.Chrome()
     driver.get(url)
