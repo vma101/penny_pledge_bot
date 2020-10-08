@@ -29,12 +29,6 @@ class Nonprofit:
         return posts
     
     def scrape_general(self):
-        # if platform.system == "Linux":
-        #     driver = webdriver.Firefox("./drivers/geckodriver-linux")
-        # elif platform.system == "Darwin":
-        #     driver = webdriver.Firefox("./drivers/geckodriver-macos")
-        # elif platform.system == "Windows":
-        #     driver = webdriver.Firefox("./drivers/geckodriver-windows.exe")
         driver = webdriver.Firefox()
         driver.get(self.site)
         ### Attempt to scrape logo, tagline, mission"
