@@ -11,7 +11,7 @@ import platform as platform
 ################################### COMPANY SCRAPERS ###################################
 
 def get_page(url):
-    driver = webdriver.Firefox("./drivers")
+    driver = webdriver.Firefox()
     # try:
     #     driver = webdriver.Chrome()
     # except:
