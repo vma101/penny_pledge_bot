@@ -29,7 +29,11 @@ class Nonprofit:
         return posts
     
     def scrape_general(self):
-        driver = webdriver.Firefox()
+        # driver = webdriver.Firefox()
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+        driver = webdriver.Chrome(executable_path = os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+        # driver = webdriver.Chrome()
         driver.get(self.site)
         ### Attempt to scrape logo, tagline, mission"
         logo = ""

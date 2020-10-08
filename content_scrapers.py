@@ -7,10 +7,16 @@ import re
 import os
 import sqlite3 as db
 
+################################### DRIVERS ###################################
+chrome_options = webdriver.ChromeOptions()
+chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+driver=webdriver.Chrome(executable_path = os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+
 ################################### COMPANY SCRAPERS ###################################
 
 def get_page(url):
-    driver = webdriver.Firefox()
+    # driver = webdriver.Firefox()
+    # driver = webdriver.Chrome()
     # try:
     #     driver = webdriver.Chrome()
     driver.get(url)
