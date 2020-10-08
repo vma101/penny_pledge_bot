@@ -59,7 +59,7 @@ def upchieve(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
     
 #### REDROVER SCRAPER
 def redrover(content_site):
@@ -105,7 +105,7 @@ def redrover(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### PCRF
 def pcrf(content_site):
@@ -153,7 +153,7 @@ def pcrf(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Pat Tillman Foundation
 def pat_tillman(content_site):
@@ -197,7 +197,7 @@ def pat_tillman(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Peer Health Exchange
 def phe(content_site):
@@ -245,7 +245,7 @@ def phe(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Ripple Effect Images
 def ripple_effect_images(content_site):
@@ -287,7 +287,7 @@ def ripple_effect_images(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### MENTOR
 def mentor(content_site):
@@ -333,7 +333,7 @@ def mentor(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Our Resilience
 def our_resilience(content_site):
@@ -376,7 +376,7 @@ def our_resilience(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Operation First Response
 def operation_first_response(content_site):
@@ -422,7 +422,7 @@ def operation_first_response(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### 4 Paws for Ability
 def four_paws_for_ability(content_site):
@@ -466,7 +466,7 @@ def four_paws_for_ability(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Team Gleason
 def team_gleason(content_site):
@@ -513,7 +513,7 @@ def team_gleason(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Youthlinc
 def youthlinc(content_site):
@@ -556,7 +556,7 @@ def youthlinc(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Eye to Eye
 def eye_to_eye(content_site):
@@ -603,7 +603,7 @@ def eye_to_eye(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Leukemia Research
 def leukemia_research(content_site):
@@ -649,7 +649,7 @@ def leukemia_research(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Bunker Labs
 def bunker_labs(content_site):
@@ -697,7 +697,7 @@ def bunker_labs(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Team Rubicon:
 def team_rubicon(content_site):
@@ -745,7 +745,7 @@ def team_rubicon(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Bernies Book Bank:
 def bernies_book_bank(content_site):
@@ -788,7 +788,7 @@ def bernies_book_bank(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Casa Central
 def casa_central(content_site):
@@ -831,7 +831,7 @@ def casa_central(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Feeding America
 def feeding_america(content_site):
@@ -875,7 +875,7 @@ def feeding_america(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### GFI
 def gfi(content_site):
@@ -920,7 +920,7 @@ def gfi(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### ICStars
 def icstars(content_site):
@@ -965,7 +965,7 @@ def icstars(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### NAFC
 def nafc(content_site):
@@ -1014,7 +1014,7 @@ def nafc(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Blessings in a Backpack
 def blessings_in_a_backpack(content_site):
@@ -1059,7 +1059,7 @@ def blessings_in_a_backpack(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### The Recyclery
 def recyclery(content_site):
@@ -1104,7 +1104,7 @@ def recyclery(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Be the Match
 def be_the_match(content_site):
@@ -1149,7 +1149,7 @@ def be_the_match(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Opportunity Knocks
 def opportunity_knocks(content_site):
@@ -1194,7 +1194,7 @@ def opportunity_knocks(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Her Justice
 def her_justice(content_site):
@@ -1239,7 +1239,7 @@ def her_justice(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Urban Pathways
 def urban_pathways(content_site):
@@ -1285,7 +1285,7 @@ def urban_pathways(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Bowery
 def bowery_mission(content_site):
@@ -1342,7 +1342,7 @@ def bowery_mission(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Capital Area Food Bank
 def capital_area_food_bank(content_site):
@@ -1387,7 +1387,7 @@ def capital_area_food_bank(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Girls Who Code
 def girls_who_code(content_site):
@@ -1432,7 +1432,7 @@ def girls_who_code(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Howard Brown
 def howard_brown(content_site):
@@ -1476,7 +1476,7 @@ def howard_brown(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 ### Our Climate
 def our_climate(content_site):
@@ -1520,7 +1520,7 @@ def our_climate(content_site):
         content_list.append(post_text_clean)
         media_list.append(post_media_clean)
     driver.quit()
-    return url_list[0:len(title_list)], title_list, date_list, content_list, media_list
+    return url_list[0:len(title_list)-1], title_list, date_list, content_list, media_list
 
 
 content_scraper = {
