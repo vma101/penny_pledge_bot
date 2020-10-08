@@ -14,8 +14,6 @@ def get_page(url):
     driver = webdriver.Firefox()
     # try:
     #     driver = webdriver.Chrome()
-    # except:
-    #     driver = webdriver.Firefox()
     driver.get(url)
     return driver
 
