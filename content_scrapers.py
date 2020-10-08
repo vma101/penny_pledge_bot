@@ -6,7 +6,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 import re
 import os
 import sqlite3 as db
-import platform as platform
 
 ################################### COMPANY SCRAPERS ###################################
 
