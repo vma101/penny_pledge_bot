@@ -41,16 +41,13 @@ def upchieve(content_site):
         title_list.append(post_list[i].text)
         post_url = post_list[i].get_attribute('href')
         url_list.append(post_url)
-    url_list = url_list[0:2]
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract date
         post_date = driver.find_element_by_class_name("Blog-meta-item--date").text
         # extract text
-        post_text = driver.find_elements_by_class_name("sqs-block-html")
-        post_text_clean = []
-        for block in post_text[:-6]:
-            post_text_clean.append(block.text.strip())
+        post_text = driver.find_element_by_class_name("sqs-col-12")
+        post_text_clean = post_text.text.strip()
         # extract image??
         post_media = driver.find_elements_by_class_name("thumb-image loaded")
         post_media_clean = []
@@ -84,8 +81,8 @@ def redrover(content_site):
     for i in range(len(url_list_all)):
         if url_list_all[i].startswith("https://redrover.org/{}".format(date.today().strftime('%Y'))):
             url_list.append(url_list_all[i])
-    url_list = url_list[0:2]
-    for i in range(len(url_list)):
+    url_list = url_list[0:5]
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_class_name("section--title").find_element_by_tag_name("h2").text
@@ -130,7 +127,8 @@ def pcrf(content_site):
     for i in range(len(url_list_all)):
         if url_list_all[i].startswith("https://pcrf-kids.org/"):
             url_list.append(url_list_all[i])
-    for i in range(len(url_list)):
+    url_list = url_list[0:5]
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_tag_name("title").text
@@ -177,7 +175,8 @@ def pat_tillman(content_site):
     for i in range(len(url_list_all)):
         if url_list_all[i].startswith("https://pattillmanfoundation.org/"):
             url_list.append(url_list_all[i])
-    for i in range(len(url_list)):
+    url_list = url_list[0:5]
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_xpath("//meta[@property='og:title']").get_attribute("content")
@@ -220,7 +219,8 @@ def phe(content_site):
     for i in range(len(url_list_all)):
         if url_list_all[i].startswith("https://www.peerhealthexchange.org/"):
             url_list.append(url_list_all[i])
-    for i in range(len(url_list)):
+    url_list = url_list[0:5]
+    for i in range(0, 5):
         # print(i)
         driver.get(url_list[i])
         # extract title
@@ -264,7 +264,8 @@ def ripple_effect_images(content_site):
         url_list_all.append(post_url)
         ### Need to siphon out urls specific to their own website information
     url_list = url_list_all
-    for i in range(len(url_list)):
+    url_list = url_list[0:5]
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_class_name("entry-title").text
@@ -305,7 +306,8 @@ def mentor(content_site):
         url_list_all.append(post_url)
         ### Need to siphon out urls specific to their own website information
     url_list = url_list_all
-    for i in range(len(url_list)):
+    url_list = url_list[0:5]
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_class_name("hentry").find_element_by_tag_name("h1").text
@@ -350,7 +352,8 @@ def our_resilience(content_site):
         url_list_all.append(post_url)
         ### Need to siphon out urls specific to their own website information
     url_list = url_list_all
-    for i in range(len(url_list)):
+    url_list = url_list[0:5]
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_xpath("//meta[@property='og:title']").get_attribute("content")
@@ -392,7 +395,8 @@ def operation_first_response(content_site):
         url_list_all.append(post_url)
         ### Need to siphon out urls specific to their own website information
     url_list = url_list_all
-    for i in range(len(url_list)):
+    url_list = url_list[0:5]
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_xpath("//meta[@property='og:title']").get_attribute("content")
@@ -439,7 +443,7 @@ def four_paws_for_ability(content_site):
         title_list = []
         ### Need to siphon out urls specific to their own website information
     url_list = url_list_all
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_xpath("//meta[@property='og:title']").get_attribute("content")
@@ -483,7 +487,7 @@ def team_gleason(content_site):
         title_list = []
         ### Need to siphon out urls specific to their own website information
     url_list = url_list_all
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_xpath("//meta[@property='og:title']").get_attribute("content")
@@ -529,7 +533,7 @@ def youthlinc(content_site):
         url_list_all.append(post_url)
         ### Need to siphon out urls specific to their own website information
     url_list = url_list_all
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_xpath("//meta[@property='og:title']").get_attribute("content")
@@ -576,7 +580,7 @@ def eye_to_eye(content_site):
         if url_list_all[i].startswith("https://eyetoeyenational.org/news/") == True:
             if url_list_all[i] not in url_list:
                 url_list.append(url_list_all[i])
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_xpath("//meta[@property='og:title']").get_attribute("content")
@@ -622,7 +626,7 @@ def leukemia_research(content_site):
     for i in range(len(url_list_all)):
         if url_list_all[i].startswith("https://allbloodcancers.org/"):
             url_list.append(url_list_all[i])
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_xpath("//meta[@property='og:title']").get_attribute("content")
@@ -668,7 +672,7 @@ def bunker_labs(content_site):
     for i in range(len(url_list_all)):
         if url_list_all[i].startswith("https://stories.bunkerlabs.org/"):
             url_list.append(url_list_all[i])
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_class_name("post-title").text
@@ -713,7 +717,7 @@ def team_rubicon(content_site):
         url_list_all.append(post_url)
     ### Need to siphon out urls specific to their own website information
     url_list = url_list_all
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_xpath("//meta[@property='og:title']").get_attribute("content")
@@ -761,7 +765,7 @@ def bernies_book_bank(content_site):
         url_list_all.append(post_url)
     ### Need to siphon out urls specific to their own website information
     url_list = url_list_all
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_xpath("//meta[@property='og:title']").get_attribute("content")
@@ -804,7 +808,7 @@ def casa_central(content_site):
         url_list_all.append(post_url)
     ### Need to siphon out urls specific to their own website information
     url_list = url_list_all
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_tag_name("h1").text
@@ -847,7 +851,7 @@ def feeding_america(content_site):
         url_list_all.append(post_url)
     ### Need to siphon out urls specific to their own website information
     url_list = url_list_all
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_class_name("page-title").text
@@ -893,7 +897,7 @@ def gfi(content_site):
     for i in range(len(url_list_all)):
         if url_list_all[i].startswith("https://www.gfi.org/blog-") == True:
             url_list.append(url_list_all[i])
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_xpath("//meta[@property='og:title']").get_attribute("content")
@@ -936,7 +940,7 @@ def icstars(content_site):
         url_list_all.append(post_url)
         ### Need to siphon out urls specific to their own website information
     url_list = url_list_all
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_xpath("//meta[@property='og:title']").get_attribute("content")
@@ -983,7 +987,7 @@ def nafc(content_site):
     for url in url_list_all:
         if url.startswith("https://www.nafcclinics.org/"):
             url_list.append(url)
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_id("page-title").text
@@ -1032,7 +1036,7 @@ def blessings_in_a_backpack(content_site):
     for url in url_list_all:
         if url.startswith("https://www.blessingsinabackpack.org/"):
             url_list.append(url)
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_xpath("//meta[@property='og:title']").get_attribute("content")
@@ -1077,7 +1081,7 @@ def recyclery(content_site):
     for url in url_list_all:
         if url.startswith("https://www.therecyclery.org/"):
             url_list.append(url)
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_xpath("//meta[@property='og:title']").get_attribute("content")
@@ -1122,7 +1126,7 @@ def be_the_match(content_site):
     for url in url_list_all:
         if url.startswith("https://bethematch.org/blog"):
             url_list.append(url)
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_xpath("//meta[@name='dcterms:title']").get_attribute("content")
@@ -1167,7 +1171,7 @@ def opportunity_knocks(content_site):
     for url in url_list_all:
         if url.startswith("https://www.opportunityknocksnow.org/"):
             url_list.append(url)
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_class_name("entry-title").text
@@ -1212,7 +1216,7 @@ def her_justice(content_site):
     for url in url_list_all:
         if url.startswith("https://herjustice.org/"):
             url_list.append(url)
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_xpath("//meta[@property='og:title']").get_attribute("content")
@@ -1257,7 +1261,7 @@ def urban_pathways(content_site):
     for url in url_list_all:
         if url.startswith("https://www.urbanpathways.org/"):
             url_list.append(url)
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_xpath("//meta[@property='og:title']").get_attribute("content")[:-17]
@@ -1303,7 +1307,7 @@ def bowery_mission(content_site):
     for url in url_list_all:
         if url.startswith("https://www.bowery.org/updates"):
             url_list.append(url)
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_xpath("//meta[@property='og:title']").get_attribute("content")[:-30]
@@ -1360,7 +1364,7 @@ def capital_area_food_bank(content_site):
     for url in url_list_all:
         if url.startswith("https://www.capitalareafoodbank.org/"):
             url_list.append(url)
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_xpath("//meta[@property='og:title']").get_attribute("content")[:-25]
@@ -1404,7 +1408,7 @@ def girls_who_code(content_site):
     for url in url_list_all:
         if url.startswith("https://girlswhocode.com/news"):
             url_list.append(url)
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_class_name("NewsArticle-header").text
@@ -1449,7 +1453,7 @@ def howard_brown(content_site):
     for url in url_list_all:
         if url.startswith("https://howardbrown.org/"):
             url_list.append(url)
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_xpath("//meta[@property='og:title']").get_attribute("content")[:-22]
@@ -1493,7 +1497,7 @@ def our_climate(content_site):
     for url in url_list_all:
         if url.startswith("https://www.ourclimate.us/"):
             url_list.append(url)
-    for i in range(len(url_list)):
+    for i in range(0, 5):
         driver.get(url_list[i])
         # extract title
         post_title = driver.find_element_by_xpath("//meta[@property='og:title']").get_attribute("content")
