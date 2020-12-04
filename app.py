@@ -38,13 +38,18 @@ def scraper():
         all = nonprofits_master
     )
 
-@app.route("/scrape_results")
+@app.route("/scrape_results", methods = ["GET", "POST"])
 def show_scrape_tables():
     nonprofits_list = re.split(",[ ]*", session["nonprofits"])
     tables = list()
     for org in nonprofits_list:
         table = scrape_bts(org)
         tables.append(table)
+    # if request.method == 'POST':
+    #     if request.form['submit_button'] == 'Do Something':
+    #         return redirect("/")
+    #     else:
+    #         pass
     return render_template(
         "scrape_results.html", 
         nonprofits = nonprofits_list, 

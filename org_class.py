@@ -29,7 +29,10 @@ class Nonprofit:
         return posts
     
     def scrape_general(self):
+        # for local testing
         # driver = webdriver.Firefox()
+
+        # for heroku deployment
         chrome_options = webdriver.ChromeOptions()
         chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
         chrome_options.add_argument('--no-sandbox')
@@ -37,7 +40,7 @@ class Nonprofit:
         chrome_options.add_argument('--disable-gpu')
         chrome_options.add_argument("--disable-dev-shm-usage")
         driver = webdriver.Chrome(executable_path = os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
-        # driver = webdriver.Chrome()
+        
         driver.get(self.site)
         ### Attempt to scrape logo, tagline, mission"
         logo = ""
