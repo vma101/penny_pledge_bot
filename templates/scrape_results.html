@@ -3,15 +3,18 @@
     <head>
         <meta charset="utf-8" />
         <title>Penny the Pledge Bot</title>
+        <button 
     </head>
     <body>
-        <strong>These are the organisations you wanted me to scrape!</strong>
+        <p><strong>These are the organisations you wanted me to scrape!</strong></p>
+        <p> Would you like to scrape something else?</p>
 
         {% for i in range(length)%}
         <p>{{nonprofits[i]}}</p>
             {{ tables[i]|safe }}
         {% endfor %}
-        
+
+
 
     </body>
 </html>
