@@ -1,3 +1,4 @@
 #### VENV DIRECTORY
 penny/
 scrape_results/
+__pycache__/
